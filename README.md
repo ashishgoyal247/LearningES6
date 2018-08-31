@@ -31,3 +31,46 @@ Array Helpers
    });
 
    // even[2, 8, 6]
+
+ 4. find
+    Iterates the array and returns first element that matches the condition in iterator function.
+
+    var students = [
+      {name: 'Alex'},
+      {name: 'Ashish'},
+      {name: 'Jack'}
+    ];
+
+    var result = names.find(function(student){
+      return student.name == 'Ashish';
+    })  
+
+5. every
+   Iterates through all elements and return true if all elements in array returns true for some given condition.
+
+6. some:
+   Iterates through all elements and return true if at least one element in array returns true for some given condition.
+
+7. reduce:
+   Iterate through all elements, takes an argument and returns a condensed value by performing some operation.
+
+   var numbers = [10, 20, 30]; 
+
+   var getSum = numbers.reduce(function(sum, number){
+     return sum + number;
+   }, 0); //sum initial value is assigned 0
+
+   //getSum = 60
+
+   Const, let, var  
+
+   const:
+   Assign to variable whose value will never change
+
+   let:
+   Assign to variable whose value might change.
+
+   var:
+   never use it.
+
+   
