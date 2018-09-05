@@ -73,4 +73,41 @@ Array Helpers
    var:
    never use it.
 
-   
+   Arrow Function:
+    Remove the function keyword and put arrow on right of arguments.
+    
+    For functions having single JS expression remove the brackets, remove the return
+    keyword and put it in the first line as shown below.
+    
+    // Without arrow functons
+    const sum = function(a, b) {
+      return a + b;
+    }
+
+    // With arrow functions
+    const sum = (a, b) => a + b;
+
+    In case there is only one argument passed to the function remove parentheses around it.
+
+    Arrow functions bind the value of 'this' to the surrounding context.
+
+    Consider the following function:
+
+    const videoList = (props) => {
+      const video = props.video;
+      console.log(video);
+    }
+
+    This can be written as:
+
+    const videoList = ({video}) => {
+      console.log(video);
+    }
+    
+    The above is possible due to ES6 syntax which says first object in the argument has a property video. Grag that property and assign it to variable video.
+
+const:
+  const is immutable except when used with objects.
+  var is avoided because it is hoisted whereas const and let
+  are blocked space i.e. they are only available within its block.
+  
